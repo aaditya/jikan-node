@@ -2,8 +2,8 @@ const Request = require('./lib/Request')
 
 module.exports = class JikanNode {
 
-    constructor() {
-        this.request = new Request
+    constructor(options) {
+        this.request = new Request(options);
     }
 
     /**
@@ -52,7 +52,7 @@ module.exports = class JikanNode {
      *
      */
     async search(type, title, param) {
-        const params = {'q': title, ...param}
+        const params = { 'q': title, ...param }
         return await this.request.send(['search', type], params)
 
     }
@@ -63,7 +63,7 @@ module.exports = class JikanNode {
      * @param {integer} year ex. 2019
      */
     async findSeason(season, year) {
-        return await this.request.send(['season', year, season])
+        return await this.request.send(['seasons', year, season])
     }
 
     /**
@@ -130,6 +130,6 @@ module.exports = class JikanNode {
      * @param {string} request members
      */
     async findClub(id, request) {
-        return await this.request.send(['club', id, request ])
+        return await this.request.send(['club', id, request])
     }
 }

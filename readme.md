@@ -1,5 +1,7 @@
 # Jikan-node
 
+This is a forked project. [Original Project.](https://github.com/xy137/jikan-node)
+
 Jikan-node is a node (and javascript) wrapper for the unofficial MAL api, Jikan
 
 Link to API: https://jikan.docs.apiary.io/
@@ -8,7 +10,7 @@ Link to genre IDs : https://jikan.docs.apiary.io/#reference/0/search
 
 ## Installation
 
-`npm install jikan-node --save`
+`npm install jikan-node`
 
 ## Features
 
